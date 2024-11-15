@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "My Vite extension",
+  "version": "1.0.0",
+  "description": "A basic example extension with only required keys",
+  "icons": {
+    "32": "vite.svg"
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": ["scripting"],
+  "host_permissions": ["http://*/*", "https://*/*"]
+}
