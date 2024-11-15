@@ -1,50 +1,52 @@
-# React + TypeScript + Vite
+# Chrome Background Color Extension
 
-This template provides a minimal setup to get React working in Vite and some ESLint rules.
+This Chrome extension allows users to change the background color of the currently active webpage. Built with **React**, **Vite**, and **TypeScript**, it features a clean and responsive UI for a seamless user experience.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Dynamic Color Selection**: Choose any color using a color picker.
+- **Instant Application**: Changes the background color of the active tab in real-time.
+- **Responsive Design**: The popup UI is optimized for various screen sizes.
 
-## Expanding the ESLint configuration
+## Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Here’s a snapshot of the extension in action:
 
-- Configure the top-level `parserOptions` property like this:
+![Demo Screenshot](./demo-screenshot.png)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
+## Technologies Used
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **React**: For building the user interface.
+- **Vite**: For fast development and build processes.
+- **TypeScript**: For type-safe, maintainable code.
+- **Tailwind CSS**: For modern and responsive styling.
 
-```js
-// eslint.config.js
-import react from "eslint-plugin-react";
+## Installation
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: "18.3" } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs["jsx-runtime"].rules,
-  },
-});
-```
+### Prerequisites
+
+Ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (v14 or later)
+- Google Chrome browser
+
+### Steps
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/nishant-zasya/background-color-extention
+   cd background-color-extention
+
+   npm install
+
+   npm run build
+
+   ```
+
+2. Load the extension:
+   Open Google Chrome and go to chrome://extensions/.
+   Enable "Developer mode" (toggle in the top right corner).
+   Click Load unpacked and select the dist folder from the project directory.
+
+   This `README.md` will provide a structured overview of your extension and guide users through setup and usage.
